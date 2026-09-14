@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Adam Rifa Galang Permana - Stark Industries Theme</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        stark: {
+                            red: '#990000',
+                            brightRed: '#E50914',
+                            gold: '#FFD700',
+                            darkGold: '#C5A059',
+                            dark: '#0A0C10',
+                            card: '#121620',
+                            border: '#2A3447',
+                            arc: '#00F0FF'
+                        }
+                    },
+                    fontFamily: {
+                        orbitron: ['Orbitron', 'sans-serif'],
+                        rajdhani: ['Rajdhani', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #060709;
+            color: #E2E8F0;
+            font-family: 'Rajdhani', sans-serif;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(153, 0, 0, 0.25) 0%, transparent 50%),
+                radial-gradient(circle at 85% 30%, rgba(0, 240, 255, 0.1) 0%, transparent 40%);
+        }
+
+        .arc-glow {
+            box-shadow: 0 0 25px rgba(0, 240, 255, 0.6), inset 0 0 15px rgba(0, 240, 255, 0.8);
+        }
+
+        .gold-glow {
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .red-border-glow {
+            box-shadow: 0 0 15px rgba(153, 0, 0, 0.5);
+            border-color: #990000;
+        }
+
+        .hud-line {
+            background: linear-gradient(90deg, transparent, #00F0FF, transparent);
+        }
+
+        .stark-card {
+            background: rgba(18, 22, 32, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            position: relative;
+            clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
+        }
+
+        .stark-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 8px;
+            border-top: 2px solid #00F0FF;
+            border-left: 2px solid #00F0FF;
+        }
+
+        .stark-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 8px;
+            height: 8px;
+            border-bottom: 2px solid #FFD700;
+            border-right: 2px solid #FFD700;
+        }
+
+        @keyframes pulse-arc {
+            0%, 100% { transform: scale(1); opacity: 0.9; }
+            50% { transform: scale(1.05); opacity: 1; box-shadow: 0 0 35px rgba(0, 240, 255, 0.9); }
+        }
+
+        .animate-arc {
+            animation: pulse-arc 3s infinite ease-in-out;
+        }
+
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white !important; color: black !important; }
+            .stark-card { background: white !important; color: black !important; border: 1px solid #ccc !important; clip-path: none !important; }
+            .text-stark-gold, .text-stark-arc { color: #8B0000 !important; }
+        }
+    </style>
+</head>
+<body class="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
+
+    <!-- Top Action Bar -->
+    <div class="max-w-4xl mx-auto mb-6 flex justify-between items-center no-print">
+        <div class="flex items-center gap-2 text-stark-arc font-orbitron text-xs tracking-widest">
+            <span class="w-2 h-2 rounded-full bg-stark-arc animate-ping"></span>
+            STARK OS v4.11 // ACTIVE PROTOCOL
+        </div>
+        <button onclick="window.print()" class="px-4 py-2 bg-stark-red hover:bg-red-700 text-stark-gold font-orbitron text-sm font-semibold rounded border border-stark-gold transition duration-300 flex items-center gap-2 gold-glow">
+            <i class="fas fa-print"></i> CETAK / SIMPAN PDF
+        </button>
+    </div>
+
+    <!-- Main Resume Container -->
+    <div class="max-w-4xl mx-auto space-y-6">
+
+        <!-- HEADER SECTION -->
+        <div class="stark-card p-6 sm:p-8 rounded-lg relative overflow-hidden">
+            <!-- HUD Decorative Elements -->
+            <div class="absolute top-2 right-4 text-[10px] font-orbitron text-gray-500 tracking-wider">
+                ID: STARK-2011-0411-ARGP
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center gap-6">
+                <!-- Arc Reactor Avatar -->
+                <div class="relative flex-shrink-0">
+                    <div class="w-32 h-32 rounded-full border-4 border-stark-gold bg-stark-dark flex items-center justify-center relative arc-glow animate-arc">
+                        <!-- Arc Reactor Core Visual -->
+                        <div class="w-20 h-20 rounded-full border-2 border-stark-arc flex items-center justify-center relative">
+                            <div class="w-10 h-10 rounded-full bg-stark-arc opacity-80 blur-xs"></div>
+                            <i class="fas fa-microchip text-stark-arc text-2xl absolute"></i>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-stark-red text-stark-gold text-[10px] font-orbitron px-2 py-0.5 rounded border border-stark-gold uppercase tracking-widest whitespace-nowrap">
+                        CADET MEMBER
+                    </div>
+                </div>
+
+                <!-- Info Header -->
+                <div class="text-center md:text-left space-y-2 flex-grow">
+                    <div class="inline-block px-3 py-1 bg-red-950/60 border border-stark-red rounded text-stark-gold text-xs font-orbitron tracking-widest mb-1">
+                        PERSONAL PROFILE DATA
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl font-black font-orbitron tracking-wider text-white uppercase drop-shadow-md">
+                        ADAM RIFA <span class="text-stark-gold">GALANG PERMANA</span>
+                    </h1>
+                    <p class="text-stark-arc font-orbitron text-sm sm:text-base tracking-widest uppercase">
+                        <i class="fas fa-shield-halved mr-1"></i> Specialization: Rhythm, Precision & Team Coordination
+                    </p>
+
+                    <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-4 text-xs font-medium text-gray-300">
+                        <span class="flex items-center gap-1.5 bg-slate-900/80 px-3 py-1.5 rounded border border-slate-700">
+                            <i class="fas fa-calendar-day text-stark-gold"></i> 11 April 2011
+                        </span>
+                        <span class="flex items-center gap-1.5 bg-slate-900/80 px-3 py-1.5 rounded border border-slate-700">
+                            <i class="fas fa-map-marker-alt text-stark-brightRed"></i> Malahayu, Banjarharjo, Brebes
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- GRID SECTION (2 COLUMNS) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <!-- LEFT COLUMN: STARK SPECIFICATIONS & PREFERENCES -->
+            <div class="space-y-6 md:col-span-1">
+                
+                <!-- PERSONAL DETAILS -->
+                <div class="stark-card p-5">
+                    <h2 class="text-lg font-orbitron font-bold text-stark-gold mb-4 pb-2 border-b border-stark-gold/30 flex items-center gap-2">
+                        <i class="fas fa-id-card text-stark-arc"></i> DATA PRIBADI
+                    </h2>
+                    <ul class="space-y-3 text-sm">
+                        <div>
+                            <span class="text-xs font-orbitron text-gray-400 block">NAMA LENGKAP</span>
+                            <span class="font-semibold text-white">Adam Rifa Galang Permana</span>
+                        </div>
+                        <div>
+                            <span class="text-xs font-orbitron text-gray-400 block">TANGGAL LAHIR</span>
+                            <span class="font-semibold text-white">11 April 2011</span>
+                        </div>
+                        <div>
+                            <span class="text-xs font-orbitron text-gray-400 block">ALAMAT LENGKAP</span>
+                            <span class="text-gray-200">Desa Malahayu, Kec. Banjarharjo, Kab. Brebes, Jawa Tengah</span>
+                        </div>
+                    </ul>
+                </div>
+
+                <!-- PREFERENCES & MATRIX -->
+                <div class="stark-card p-5">
+                    <h2 class="text-lg font-orbitron font-bold text-stark-gold mb-4 pb-2 border-b border-stark-gold/30 flex items-center gap-2">
+                        <i class="fas fa-sliders text-stark-arc"></i> PREFERENSI
+                    </h2>
+                    
+                    <div class="space-y-4 text-sm">
+                        <!-- Film Favorit -->
+                        <div>
+                            <span class="text-xs font-orbitron text-gray-400 block mb-1">FILM FAVORIT</span>
+                            <div class="p-2.5 bg-red-950/40 border border-stark-red/50 rounded flex items-center gap-3">
+                                <i class="fas fa-film text-stark-gold text-lg"></i>
+                                <div>
+                                    <div class="font-bold text-white font-orbitron text-xs">AVENGERS: ENDGAME</div>
+                                    <div class="text-[11px] text-gray-400">Favorite Marvel Cinematic Universe Movie</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Palet Warna -->
+                        <div>
+                            <span class="text-xs font-orbitron text-gray-400 block mb-1">PALET WARNA FAVORIT</span>
+                            <div class="p-2.5 bg-slate-900/80 border border-slate-700 rounded space-y-2">
+                                <div class="flex items-center justify-between text-xs">
+                                    <span class="text-gray-300"><i class="fas fa-check-circle text-green-400 mr-1"></i> Menyukai Semua Warna</span>
+                                </div>
+                                <div class="text-[11px] text-red-400 flex items-center gap-1 border-t border-slate-800 pt-1.5">
+                                    <i class="fas fa-ban"></i> Kecuali Pink & Ungu
+                                </div>
+                                <!-- Visual Color Indicators -->
+                                <div class="flex gap-1.5 pt-1">
+                                    <span class="w-5 h-5 rounded-full bg-red-600 inline-block border border-white/20" title="Merah"></span>
+                                    <span class="w-5 h-5 rounded-full bg-yellow-400 inline-block border border-white/20" title="Kuning/Emas"></span>
+                                    <span class="w-5 h-5 rounded-full bg-cyan-400 inline-block border border-white/20" title="Cyan Arc"></span>
+                                    <span class="w-5 h-5 rounded-full bg-blue-600 inline-block border border-white/20" title="Biru"></span>
+                                    <span class="w-5 h-5 rounded-full bg-emerald-500 inline-block border border-white/20" title="Hijau"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN: EXPERIENCE & KEAHLIAN -->
+            <div class="space-y-6 md:col-span-2">
+
+                <!-- PENGALAMAN UTAMA -->
+                <div class="stark-card p-5 sm:p-6">
+                    <h2 class="text-lg font-orbitron font-bold text-stark-gold mb-4 pb-2 border-b border-stark-gold/30 flex items-center gap-2">
+                        <i class="fas fa-award text-stark-arc"></i> PENGALAMAN & REKAM JEJAK
+                    </h2>
+
+                    <div class="relative pl-6 border-l-2 border-stark-red space-y-6">
+                        <!-- Experience Item 1 -->
+                        <div class="relative">
+                            <!-- Timeline Dot -->
+                            <div class="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-stark-gold border-2 border-stark-dark gold-glow"></div>
+                            
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-1">
+                                <h3 class="text-base font-bold font-orbitron text-white">
+                                    ANGGOTA MARCHING BAND
+                                </h3>
+                                <span class="text-xs font-orbitron px-2 py-0.5 bg-stark-red/40 text-stark-gold rounded border border-stark-red/60 w-fit mt-1 sm:mt-0">
+                                    PENGALAMAN AKTIF
+                                </span>
+                            </div>
+                            
+                            <p class="text-xs text-stark-arc font-orbitron mb-2">Divisi Musik & Formasi Lapangan</p>
+                            
+                            <ul class="text-sm text-gray-300 space-y-1.5 list-disc list-inside">
+                                <li>Melatih kedisiplinan tinggi, ketepatan ritme, dan kekompakan tim dalam pertunjukan.</li>
+                                <li>Memiliki kemampuan koordinasi lapangan dan fokus mendengarkan komando tempo/instruksi.</li>
+                                <li>Berpartisipasi aktif dalam kegiatan latihan rutin dan pementasan acara.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STARK TACTICAL SKILLS & CHARACTERISTICS -->
+                <div class="stark-card p-5 sm:p-6">
+                    <h2 class="text-lg font-orbitron font-bold text-stark-gold mb-4 pb-2 border-b border-stark-gold/30 flex items-center gap-2">
+                        <i class="fas fa-bolt text-stark-arc"></i> KEAHLIAN & ATRIBUT UTAMA
+                    </h2>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        
+                        <!-- Skill 1 -->
+                        <div class="bg-slate-900/60 p-3.5 rounded border border-slate-800">
+                            <div class="flex justify-between items-center mb-1.5">
+                                <span class="font-orbitron text-xs text-gray-200">Kerjasama Tim & Komunikasi</span>
+                                <span class="font-orbitron text-xs text-stark-arc">95%</span>
+                            </div>
+                            <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                                <div class="bg-gradient-to-r from-stark-red to-stark-gold h-full rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Skill 2 -->
+                        <div class="bg-slate-900/60 p-3.5 rounded border border-slate-800">
+                            <div class="flex justify-between items-center mb-1.5">
+                                <span class="font-orbitron text-xs text-gray-200">Kedisiplinan & Ritme Kerja</span>
+                                <span class="font-orbitron text-xs text-stark-arc">90%</span>
+                            </div>
+                            <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                                <div class="bg-gradient-to-r from-stark-red to-stark-gold h-full rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Skill 3 -->
+                        <div class="bg-slate-900/60 p-3.5 rounded border border-slate-800">
+                            <div class="flex justify-between items-center mb-1.5">
+                                <span class="font-orbitron text-xs text-gray-200">Fokus & Konsentrasi High-Pressure</span>
+                                <span class="font-orbitron text-xs text-stark-arc">88%</span>
+                            </div>
+                            <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                                <div class="bg-gradient-to-r from-stark-red to-stark-gold h-full rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Skill 4 -->
+                        <div class="bg-slate-900/60 p-3.5 rounded border border-slate-800">
+                            <div class="flex justify-between items-center mb-1.5">
+                                <span class="font-orbitron text-xs text-gray-200">Semangat & Daya Juang (Endgame Energy)</span>
+                                <span class="font-orbitron text-xs text-stark-arc">100%</span>
+                            </div>
+                            <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                                <div class="bg-gradient-to-r from-stark-red to-stark-arc h-full rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- STARK QUOTE MOTTO -->
+                <div class="p-4 rounded-lg bg-gradient-to-r from-red-950/60 via-slate-900/80 to-slate-900/80 border border-stark-gold/40 flex items-center gap-4">
+                    <div class="text-3xl text-stark-gold">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm italic text-gray-200">
+                            "Part of the journey is the end. I love you 3000."
+                        </p>
+                        <p class="text-xs font-orbitron text-stark-arc mt-1">
+                            — Inspired by Avengers: Endgame & Stark Spirit
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- FOOTER / SYSTEM STATUS -->
+        <div class="text-center pt-4 border-t border-slate-800 text-xs font-orbitron text-gray-500 flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div>STARK INDUSTRIES // PERSONNEL PROFILE DIVISION</div>
+            <div class="text-stark-gold">CONFIDENTIAL & VERIFIED DATA</div>
+        </div>
+
+    </div>
+
+</body>
+</html>
